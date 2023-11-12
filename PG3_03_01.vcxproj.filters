@@ -23,6 +23,9 @@
     <Filter Include="KamataEngine\InputManager">
       <UniqueIdentifier>{63b4cf8e-b5ff-445a-84bf-88d8e2518a97}</UniqueIdentifier>
     </Filter>
+    <Filter Include="KamataEngine\Character">
+      <UniqueIdentifier>{ba2c79b2-0b63-4e5a-b2ee-b2f1a43e2a7e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="C:\KamataEngine\DirectXGame\base\DirectXCommon.cpp">
@@ -64,6 +67,15 @@
     </ClCompile>
     <ClCompile Include="InputManager.cpp">
       <Filter>KamataEngine\InputManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>KamataEngine\Character</Filter>
+    </ClCompile>
+    <ClCompile Include="Enemy.cpp">
+      <Filter>KamataEngine\Character</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerBullet.cpp">
+      <Filter>KamataEngine</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -156,5 +168,12 @@
     <ClInclude Include="InputManager.h">
       <Filter>KamataEngine\InputManager</Filter>
     </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>KamataEngine\Character</Filter>
+    </ClInclude>
+    <ClInclude Include="Enemy.h">
+      <Filter>KamataEngine\Character</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerBullet.h" />
   </ItemGroup>
 </Project>

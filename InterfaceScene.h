@@ -1,7 +1,8 @@
 ﻿#pragma once
 #include <Novice.h>
 #include"InputManager.h"
-
+#include <memory>
+#include <iostream>
 
 enum SCENE {
 	TITLE,

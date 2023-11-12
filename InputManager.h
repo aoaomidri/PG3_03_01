@@ -2,10 +2,10 @@
 #include"Input.h"
 class InputManager{
 public:
-	InputManager();
-	~InputManager();
 
 	static InputManager* GetInstance();
+
+	void Initialize();
 
 	void Update();
 
@@ -16,6 +16,7 @@ public:
 	bool ReleseKey(BYTE keyNumber)const;
 
 private:
+
 	// キー入力結果を受け取る箱
 	char keys[256];
 	char preKeys[256];

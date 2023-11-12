@@ -20,7 +20,7 @@ private:
 	//シーンを保持するメンバ変数
 	std::unique_ptr<InterfaceScene> sceneArray_[3];
 
-	std::unique_ptr<InputManager> inputManager_;
+	InputManager* inputManager_ = nullptr;
 
 	//どのステージを呼び出すかを管理する変数
 	//現在のシーン

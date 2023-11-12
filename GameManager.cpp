@@ -1,7 +1,7 @@
 ﻿#include "GameManager.h"
 
 GameManager::GameManager(){
-	inputManager_ = std::make_unique<InputManager>();
+	
 
 	sceneArray_[TITLE] = std::make_unique<TitleScene>();
 	sceneArray_[STAGE] = std::make_unique<StageScene>();
@@ -12,7 +12,6 @@ GameManager::GameManager(){
 }
 
 GameManager::~GameManager(){
-
 }
 
 void GameManager::Initialize(){
@@ -20,6 +19,9 @@ void GameManager::Initialize(){
 
 	// ライブラリの初期化
 	Novice::Initialize(kWindowTitle, 1280, 720);
+
+	inputManager_ = InputManager::GetInstance();
+	inputManager_->Initialize();
 }
 
 int GameManager::GameLoop(){
