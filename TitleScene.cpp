@@ -17,8 +17,13 @@ void TitleScene::Update(){
 }
 
 void TitleScene::Draw(){
-	ImGui::Begin("Test");
-	ImGui::End();
+	DrawImgui();
 
 	Novice::DrawBox(0, 0, 1280, 720, 0.0f, 0x005555ff, kFillModeSolid);
+}
+
+void TitleScene::DrawImgui(){
+	ImGui::Begin("Title tips");
+	ImGui::Text("Push Enter key to go to next scene");
+	ImGui::End();
 }

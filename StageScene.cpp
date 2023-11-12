@@ -13,16 +13,14 @@ void StageScene::Initialize(){
 
 void StageScene::Update(){
 	player_->Update();
-	enemy_->Update();
-
-	DrawImgui();
+	enemy_->Update();	
 
 	CollisionChack();
 }
 
 void StageScene::Draw(){
 	Novice::DrawBox(0, 0, 1280, 720, 0.0f, 0x0055aaff, kFillModeSolid);
-
+	DrawImgui();
 	player_->Draw();
 	enemy_->Draw();
 }
@@ -57,5 +55,10 @@ void StageScene::DrawImgui(){
 		ImGui::DragFloat("distance", &distance, 0.1f);
 		ImGui::DragFloat("radius", &totalRadius, 0.1f);
 	}
+	ImGui::End();
+
+	ImGui::Begin("Stage tips");
+	ImGui::Text("Push space key to shot");
+	ImGui::Text("Push arrow key to player move");
 	ImGui::End();
 }

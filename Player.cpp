@@ -47,7 +47,7 @@ void Player::Update(){
 		bullet->Update();
 	}
 
-	DrawImgui();
+	
 
 }
 
@@ -79,6 +79,7 @@ void Player::Draw(){
 	for (PlayerBullet* bullet : bullets_) {
 		bullet->Draw();
 	}
+	DrawImgui();
 }
 
 void Player::DrawImgui(){

@@ -9,6 +9,8 @@ public:
 	void Update()override;
 	void Draw()override;
 
+	void DrawImgui();
+
 private:
 	InputManager* inputmanager_ = nullptr;
 };

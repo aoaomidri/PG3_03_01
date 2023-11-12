@@ -16,5 +16,11 @@ void ClearStage::Update(){
 }
 
 void ClearStage::Draw(){
+	DrawImgui();
+}
 
+void ClearStage::DrawImgui(){
+	ImGui::Begin("Clear tips");
+	ImGui::Text("Push Enter key to go to next scene");
+	ImGui::End();
 }
