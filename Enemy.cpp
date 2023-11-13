@@ -8,7 +8,7 @@ void Enemy::Initialize(){
 }
 
 void Enemy::Update(){
-	//Position_.x += moveSpeed_;
+	Position_.x += moveSpeed_;
 	if (Position_.x > moveMax) {
 		moveSpeed_ *= -1;
 	}
