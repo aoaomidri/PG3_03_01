@@ -26,6 +26,9 @@
     <Filter Include="KamataEngine\Character">
       <UniqueIdentifier>{ba2c79b2-0b63-4e5a-b2ee-b2f1a43e2a7e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="KamataEngine\Character\Command">
+      <UniqueIdentifier>{8c3bac11-37d9-4466-a684-7ddbc258697f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="C:\KamataEngine\DirectXGame\base\DirectXCommon.cpp">
@@ -43,9 +46,6 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="C:\KamataEngine\Adapter\Novice.cpp">
       <Filter>KamataEngine\Adapter</Filter>
-    </ClCompile>
-    <ClCompile Include="C:\KamataEngine\DirectXGame\2d\ImGuiManager.cpp">
-      <Filter>KamataEngine</Filter>
     </ClCompile>
     <ClCompile Include="C:\KamataEngine\DirectXGame\base\StringUtility.cpp">
       <Filter>KamataEngine\Source</Filter>
@@ -76,6 +76,15 @@
     </ClCompile>
     <ClCompile Include="PlayerBullet.cpp">
       <Filter>KamataEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="ICommand.cpp">
+      <Filter>KamataEngine\Character\Command</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\KamataEngine\DirectXGame\2d\ImGuiManager.cpp">
+      <Filter>KamataEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="InputHandler.cpp">
+      <Filter>KamataEngine\Character\Command</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -175,5 +184,11 @@
       <Filter>KamataEngine\Character</Filter>
     </ClInclude>
     <ClInclude Include="PlayerBullet.h" />
+    <ClInclude Include="ICommand.h">
+      <Filter>KamataEngine\Character\Command</Filter>
+    </ClInclude>
+    <ClInclude Include="InputHandler.h">
+      <Filter>KamataEngine\Character\Command</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

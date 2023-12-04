@@ -2,16 +2,38 @@
 
 StageScene::StageScene(){
 	inputmanager_ = InputManager::GetInstance();
+	inputHandler_ = new InputHandler();
+
+	inputHandler_->AssignMoveLeftCommandtoPressKeyA();
+	inputHandler_->AssignMoveRightCommandtoPressKeyD();
+	inputHandler_->AssignMoveUpCommandtoPressKeyW();
+	inputHandler_->AssignMoveDownCommandtoPressKeyS();
+	inputHandler_->AssigndShotCommandtoPressKeySpace();
+
+
 	player_ = std::make_unique<Player>();
 	enemy_ = std::make_unique<Enemy>();
 }
 
+StageScene::~StageScene(){
+	delete inputHandler_;
+	delete iCommand_;
+}
+
 void StageScene::Initialize(){
+
+
 	player_->Initialize();
 	enemy_->Initialize();
 }
 
 void StageScene::Update(){
+	iCommand_ = inputHandler_->HandlerInput();
+
+	if (this->iCommand_){
+		iCommand_->Exec(*player_.get());
+	}
+
 	player_->Update();
 	enemy_->Update();	
 
@@ -59,6 +81,6 @@ void StageScene::DrawImgui(){
 
 	ImGui::Begin("Stage tips");
 	ImGui::Text("Push space key to shot");
-	ImGui::Text("Push arrow key to player move");
+	ImGui::Text("Push WASD key to player move");
 	ImGui::End();
 }

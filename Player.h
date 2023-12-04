@@ -15,6 +15,11 @@ public:
 	void shot();
 	void Draw();
 
+	void MoveRight();
+	void MoveLeft();
+	void MoveUp();
+	void MoveDown();
+
 public:
 	// 弾リストを取得
 	const std::list<PlayerBullet*>& GetBullets() { return bullets_; }

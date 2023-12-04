@@ -28,20 +28,6 @@ void Player::Update(){
 		return false;
 	});
 
-	if (inputmanager_->PushKey(DIK_RIGHT)){
-		position_.x += moveSpeed_;
-	}
-	if (inputmanager_->PushKey(DIK_LEFT)) {
-		position_.x -= moveSpeed_;
-	}
-	if (inputmanager_->PushKey(DIK_UP)) {
-		position_.y -= moveSpeed_;
-	}
-	if (inputmanager_->PushKey(DIK_DOWN)) {
-		position_.y += moveSpeed_;
-	}
-
-	shot();
 
 	for (PlayerBullet* bullet : bullets_) {
 		bullet->Update();
@@ -80,6 +66,22 @@ void Player::Draw(){
 		bullet->Draw();
 	}
 	DrawImgui();
+}
+
+void Player::MoveRight(){
+	position_.x += moveSpeed_;
+}
+
+void Player::MoveLeft(){
+	position_.x -= moveSpeed_;
+}
+
+void Player::MoveUp(){
+	position_.y -= moveSpeed_;
+}
+
+void Player::MoveDown(){
+	position_.y += moveSpeed_;
 }
 
 void Player::DrawImgui(){
